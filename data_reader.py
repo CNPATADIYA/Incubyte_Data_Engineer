@@ -15,4 +15,12 @@ df = pd.read_sql('SELECT * FROM patients', con=database)
 # set customer id as index
 df.set_index(['Customer_ID'], inplace=True)  
 
-print(df)
+
+def get_country_data(country):
+    #Fetching data country wise 
+    data = df.loc[df['Country'] == country]
+    return data
+    
+
+data = get_country_data("IND") #fetching data for india
+print(data)
