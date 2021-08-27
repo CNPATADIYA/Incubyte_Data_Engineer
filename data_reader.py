@@ -7,5 +7,12 @@ database = mysql.connector.connect(
     user="root",
     database="hospital")
 
-#check database connectivity
-database.cursor().execute("select * from patients")
+
+
+# read patients data in pandas dataframe
+df = pd.read_sql('SELECT * FROM patients', con=database) 
+
+# set customer id as index
+df.set_index(['Customer_ID'], inplace=True)  
+
+print(df)
