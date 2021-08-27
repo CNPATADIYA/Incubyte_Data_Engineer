@@ -22,5 +22,8 @@ def get_country_data(country):
     return data
     
 
-data = get_country_data("IND") #fetching data for india
-print(data)
+country = "IND"
+data = get_country_data(country) #fetching data for india
+
+#exporting into CSV
+data.to_csv('data/' + country + ".csv")
