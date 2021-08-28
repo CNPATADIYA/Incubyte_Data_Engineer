@@ -7,6 +7,7 @@ This repository contain implementation of Incubyte Assessment for data engineer 
  - phpmyadmin
  
   >**Working**
+ - ```data_adder.py``` reads data from the pipe delimited data file ```data.txt``` and Insert data into database.
  - In ```data_reader.py``` file database is connected using mysql.connctor.
  - Table data is fetched using ```read_sql()``` method in pandas
  - ```get_country_data()``` function which is tacking country name as argument implemented to get country wise data from dataframe.
